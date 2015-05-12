@@ -8,16 +8,22 @@
 
 <script type="text/javascript">
     var form = document.createElement("form");
+    
+    var url = "http://localhost:3000/message_list";
+    var params = {
+        listId: 1,
+        text: "Hello!"
+    };
 	
-	var url = "http://localhost:3000/send_message";
-	var params = {
-		to: "+16508043988",
-		text: "Hello!"
-	};
+	// var url = "http://localhost:3000/message_number";
+	// var params = {
+	// 	to: "6508043988",
+	// 	text: "Hello you!"
+	// };
 	var method = "post";
     form.setAttribute("method", method);
     form.setAttribute("action", url);
-    form.setAttribute("target", "_blank");
+    // form.setAttribute("target", "_blank");
 
     for (var key in params) {
         if (params.hasOwnProperty(key)) {
