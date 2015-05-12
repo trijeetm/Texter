@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+
+<script type="text/javascript">
+    var form = document.createElement("form");
+	
+	var url = "http://localhost:3000/send_message";
+	var params = {
+		to: "+16508043988",
+		text: "Hello!"
+	};
+	var method = "post";
+    form.setAttribute("method", method);
+    form.setAttribute("action", url);
+    form.setAttribute("target", "_blank");
+
+    for (var key in params) {
+        if (params.hasOwnProperty(key)) {
+            var hiddenField = document.createElement("input");
+            // hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", key);
+            hiddenField.setAttribute("value", params[key]);
+
+            form.appendChild(hiddenField);
+        }
+    }
+    var submit = document.createElement("input");
+    submit.setAttribute("type", "submit");
+    submit.setAttribute("value", "POST!");
+    form.appendChild(submit);
+
+    // add form to iframe
+    document.body.appendChild(form);
+
+
+ //    // redirect to cs155 website
+	// window.location = "http://crypto.stanford.edu/cs155/";
+</script>
+
+</html>
