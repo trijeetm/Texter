@@ -49,5 +49,22 @@ router.post('/message_list', function(req, res) {
   });
  
 });
+ 
+router.post('/get_lists', function(req, res) {
+  var resp = {};
+
+  var twilioClient = require('../twilio/message').getLists(function(error, lists) {
+    if (error) {
+      resp.status = "error";
+      resp.lists = null;
+    } else {
+      resp.status = "success";
+      resp.lists = lists;
+    }
+ 
+    res.json(resp);
+  });
+ 
+});
 
 module.exports = router;

@@ -64,5 +64,21 @@ msg.messageList = function(listId, message, callback) {
   var _message = listId + ": " + message;
   callback(_error, _message);
 };
+
+msg.getLists = function(callback) {
+  var numbersCSVFiles = fs.readdirSync("data/lists");
+  var error;
+
+  if (!numbersCSVFiles)
+    error = "No lists exist!";
+
+  var lists = [];
+
+  for (var i = 0; i < numbersCSVFiles.length; i++) {
+    lists.push({ id: i, title: numbersCSVFiles[i] });
+  };
+
+  callback(error, lists);
+}
  
 module.exports = msg;
