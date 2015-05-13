@@ -34,7 +34,7 @@ msg.messageNumber = function(to, message, callback) {
 msg.messageList = function(listId, message, callback) {
   // open csv file
   var numbersCSVFiles = fs.readdirSync("data/lists");
-  var numbersCSVFile = "data/lists/" + numbersCSVFiles[listId];
+  var numbersCSVFile = "data/lists/" + numbersCSVFiles[listId - 1];
   var numbersCSV = fs.readFileSync(numbersCSVFile);
   var numbers = numbersCSV.toString().split(new RegExp('\r|\n', 'g'));
 

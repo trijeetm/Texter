@@ -51,6 +51,8 @@ angular.module('starter.controllers', [])
 
 .controller('MessageListCtrl', function($scope, $ionicLoading, $ionicPopup, $stateParams, API) {
 	$scope.list = {};
+  $scope.msg = {};
+  $scope.msg.listId = $stateParams.listId;
 
 	$ionicLoading.show({
 	  template: "Preparing list"
@@ -64,9 +66,6 @@ angular.module('starter.controllers', [])
 			$ionicLoading.hide();
 		}, 1000);
 	});
-
-	$scope.msg = {};
-	$scope.msg.listId = $stateParams.listId;
 
 	$scope.sendMessage = function () {
 		console.log($scope.msg);
