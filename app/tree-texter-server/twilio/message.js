@@ -75,7 +75,7 @@ msg.getLists = function(callback) {
   var lists = [];
 
   for (var i = 0; i < numbersCSVFiles.length; i++) {
-    lists.push({ id: i, title: numbersCSVFiles[i] });
+    lists.push({ id: i + 1, title: numbersCSVFiles[i].split(".")[0] });
   };
 
   callback(error, lists);

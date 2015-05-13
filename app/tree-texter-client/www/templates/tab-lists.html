@@ -1,0 +1,15 @@
+<ion-view view-title="Message Lists">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-icon-right" ng-repeat="list in lists" type="item-text-wrap" href="#/tab/lists/{{list.id}}">
+        <i class="icon ion-chevron-right icon-accessory"></i>
+        <h2>{{list.title}}</h2>
+
+        <!-- Expand: Delete/edit list -->
+        <!-- <ion-option-button class="button-assertive" ng-click="">
+          Delete
+        </ion-option-button> -->
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
