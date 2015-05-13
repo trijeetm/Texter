@@ -10,18 +10,19 @@ router.post('/message_number', function(req, res) {
     resp.message = "invalid data";
     res.json(resp);
   }
- 
-  var twilioClient = require('../twilio/message').messageNumber(msg.to, msg.text, function(error, message) {
-    if (error) {
-      resp.status = "error";
-      resp.message = error;
-    } else {
-      resp.status = "success";
-      resp.message = message.sid;
-    }
- 
-    res.json(resp);
-  });
+  else {
+    var twilioClient = require('../twilio/message').messageNumber(msg.to, msg.text, function(error, message) {
+      if (error) {
+        resp.status = "error";
+        resp.message = error;
+      } else {
+        resp.status = "success";
+        resp.message = message.sid;
+      }
+   
+      res.json(resp);
+    });
+  }
  
 });
  

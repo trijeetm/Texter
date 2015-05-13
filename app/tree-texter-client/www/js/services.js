@@ -1,5 +1,19 @@
 angular.module('starter.services', [])
 
+.factory('API', function($http) {
+  var api = {};
+  var baseURL = 'http://localhost:3000';
+ 
+  api.sendDirectMessage = function(to, text) {
+    return $http.post(baseURL + '/message_number', {
+      "to": to,
+      "text": text
+    });
+  };
+ 
+  return api;
+})
+
 .factory('Chats', function() {
   // Might use a resource here that returns a JSON array
 
