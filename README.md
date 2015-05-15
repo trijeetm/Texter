@@ -40,5 +40,5 @@ $ node texter.js
 Have questions or trouble setting up? Shoot me an email at `trijeetm@gmail.com`.
 
 #### Useful resources
-(http://ionicframework.com/getting-started/)
-(https://nodejs.org/)
+Ionic framework: (http://ionicframework.com/getting-started/)
+Node.js: (https://nodejs.org/)
