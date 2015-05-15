@@ -35,3 +35,10 @@ To run the command line tool, simply go into the directory and run the node app.
 $ cd cli/
 $ node texter.js
 ```
+
+## Issues?
+Have questions or trouble setting up? Shoot me an email at `trijeetm@gmail.com`.
+
+#### Useful resources
+(http://ionicframework.com/getting-started/)
+(https://nodejs.org/)
