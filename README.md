@@ -16,11 +16,7 @@ To run the app, you need to configure the node server.
 $ cd app/tree-texter-server
 $ sudo npm install
 ```
-Before we proceed, we need to provide an AccountSID and AuthToken for the Twilio API. From the `tree-texter-server/` directory,
-```bash
-$ cd twilio/
-```
-And open `auth.js` in your favorite text editor, and replace `ACCOUNT_SID` and `AUTH_TOKEN` with your Twilio account sid and auth token respectively.
+Before we proceed, we need to provide an AccountSID and AuthToken for the Twilio API. From the `tree-texter-server/` directory, and open `twilio/auth.js` in your favorite text editor, and replace `ACCOUNT_SID` and `AUTH_TOKEN` with your Twilio account sid and auth token respectively.
 Once we have provided the authentication details, the server is ready to go.
 ```bash
 $ node app.js
@@ -31,7 +27,7 @@ The client-side of the app is built using the Ionic framework, which is an hybri
 ```bash
 npm install -g cordova ionic
 ```
-Once you have Ionic set up, you're ready to either serve up Texter as web-app, or build out a native mobile app and test in on device / simulator.
+Once you have Ionic set up, you're ready to either serve up Texter as web-app, or build out a native mobile app and test in on device / simulator. From the directory you clones the repository:
 ```bash
 $ cd app/tree-texter-client
 $ ionic serve
@@ -39,6 +35,7 @@ $ ionic serve
 The web-app should be now serving on localhost:8100.
 
 #### Command Line Tool
+Before we proceed, we need to provide an AccountSID and AuthToken for the Twilio API. Open `auth.js` in your favorite text editor, and replace `ACCOUNT_SID` and `AUTH_TOKEN` with your Twilio account sid and auth token respectively.
 To run the command line tool, simply go into the directory and run the node app.
 ```bash
 $ cd cli/
