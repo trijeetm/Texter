@@ -1,5 +1,7 @@
-var accountSid = 'AC3441ffbb10cf4fd9ada0aaeed8505e99';
-var authToken = '4182dfa563d7e71f3cc8c3ec08149d47';
+var auth = require('./auth.js');
+
+var accountSid = auth.accountSid;
+var authToken = auth.authToken;
 
 var client = require('twilio')(accountSid, authToken);
 

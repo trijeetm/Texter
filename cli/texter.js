@@ -1,9 +1,16 @@
+var auth = require('./auth.js');
+
+var accountSid = auth.accountSid;
+var authToken = auth.authToken;
+
 var twilio = require('/usr/local/lib/node_modules/twilio');
 var prompt = require('/usr/local/lib/node_modules/prompt');
 var fs = require('fs');
 
-var accountSid = 'AC3441ffbb10cf4fd9ada0aaeed8505e99';
-var authToken = '4182dfa563d7e71f3cc8c3ec08149d47';
+if (process.argc != 2) {
+	console.log('Usage:\t node texter.js <numbers_list>.csv');
+	process.exit(1);
+}
 
 var numbersCSVFile = process.argv[2];
 console.log(numbersCSVFile);
