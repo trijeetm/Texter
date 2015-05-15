@@ -11,11 +11,19 @@ The project requires node to run, so if you don't have node installed on your ma
 
 
 #### App
-
+To run the app, you need to first fire up the Express server.
+```bash
+$ cd app/tree-texter-server
+$ node app.js
+```
+The client-side of the app is built using the Ionic framework, which is an hybrid mobile app SDK. If you don't have Ionic installed on your machine, run the following command to set it up.
+```bash
+npm install -g cordova ionic
+```
 
 #### Command Line Tool
 To run the command line tool, simply go into the directory and run the node app.
 ```bash
-> cd cli/
-> node texter.js
+$ cd cli/
+$ node texter.js
 ```
