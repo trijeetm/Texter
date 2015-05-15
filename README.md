@@ -27,7 +27,7 @@ The client-side of the app is built using the Ionic framework, which is an hybri
 ```bash
 npm install -g cordova ionic
 ```
-Once you have Ionic set up, you're ready to either serve up Texter as web-app, or build out a native mobile app and test in on device / simulator. From the directory you clones the repository:
+Once you have Ionic set up, you're ready to either serve up Texter as web-app, or build out a native mobile app and test in on device / simulator. From the directory into which you cloned the repository:
 ```bash
 $ cd app/tree-texter-client
 $ ionic serve
