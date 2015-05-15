@@ -14,6 +14,7 @@ The project requires node to run, so if you don't have node installed on your ma
 To run the app, you need to first fire up the Express server.
 ```bash
 $ cd app/tree-texter-server
+$ sudo npm install
 $ node app.js
 ```
 The Express server should be now listening on localhost:3000.
