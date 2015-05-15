@@ -11,10 +11,18 @@ The project requires node to run, so if you don't have node installed on your ma
 
 
 #### App
-To run the app, you need to first fire up the Express server.
+To run the app, you need to configure the node server.
 ```bash
 $ cd app/tree-texter-server
 $ sudo npm install
+```
+Before we proceed, we need to provide an AccountSID and AuthToken for the Twilio API. From the `tree-texter-server/` directory,
+```bash
+$ cd twilio/
+```
+And open `auth.js` in your favorite text editor, and replace `ACCOUNT_SID` and `AUTH_TOKEN` with your Twilio account sid and auth token respectively.
+Once we have provided the authentication details, the server is ready to go.
+```bash
 $ node app.js
 ```
 The Express server should be now listening on localhost:3000.
